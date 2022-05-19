@@ -5,7 +5,7 @@ pipeline {
          steps
             git clone 'https://github.com/sampathkbr/Sampath.git/'
             cd Sampath
-            sh docker build -t Sampath/dockernodejs .
+            sh docker build -t dockernodejs .
             docker container run -it -p 8081:8080 -d --name nodeapplication Sampath/dockernodejs
 
         }
